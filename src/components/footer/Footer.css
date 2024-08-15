@@ -27,11 +27,19 @@
     bottom: 15px;
     color: white;
     margin-left: 3%;
-    max-width: 15vw;
+    max-width: 20vw;
 }
 
 .footer-title {
     font-size: 3vw;
+}
+
+@media (max-width: 480px) {
+
+    .footer-title {
+        font-size: 6vw;
+    }
+    
 }
 
 .footer-input {
