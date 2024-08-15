@@ -2,7 +2,43 @@ Webshop - Add to cart | Made with React - React Router - Typescript - Vite.
 
 The main point of this project is to implement a add to cart functionality, which shares the cart among a SPA with react router.
 
+Notepad - Components: 
 
+  - Homepage components: 
+
+   - Shared Header component with logo - Shop, About, Contact - Placeholders -> Serach, Profile - Cart (shopping bag)
+   - Slideshow banner 
+   - Shop (products) component with spread around items as design
+   - Static banner
+   - Shared footer with logo - address - links
+
+  - Contact components:
+   
+   - Shared header
+   - Left side pictures with adress
+   - Right side form
+   - Shared footer
+
+  - About components:
+
+   - Shared header
+   - Main component with two pictures and text
+   - Shared footer
+
+  - Cart components:
+
+    - Cart header with title (containing amount of items) and close cart button
+    - Product component which is rendered twice - Contains image, title and description, quantity button, price and remove button.
+    - Footer with estimated shipping time and checkout button with price.
+
+- Pages:
+
+  - Homepage
+  - About 
+  - Contact
+  - 404 page
+
+----------------------------------------------------------------------------------------------------------------------------------------
 
 - You should have at least two pages (a home page and a shop page, which includes your shopping cart). Let the user navigate between the pages with a navigation bar, which will be shown on both pages.
 

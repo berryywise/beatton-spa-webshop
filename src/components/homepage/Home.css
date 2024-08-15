@@ -1,0 +1,16 @@
+.home-banner{
+    position: relative;
+    background-image: url(/src/assets/banner-homepage.jpeg);
+    background-size: cover;
+    width: 100%;
+    aspect-ratio: 3.8 / 2;
+}
+
+.overlay-text {
+    position: absolute;
+    font-size: 27vw;
+    top: 50%;
+    left: 7%;
+    color: #FFF9F9;
+}
+
