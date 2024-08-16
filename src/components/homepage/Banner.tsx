@@ -1,4 +1,3 @@
-import homeBanner from "../../assets/banner-homepage.jpeg"
 import "./Home.css"
 
 const Banner = () => {

@@ -3,15 +3,16 @@ import userIcon from "../../assets/ph--user-thin.svg"
 import searchIcon from "../../assets/iconamoon--search-thin.svg"
 
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 
 const Header = () => {
     return (
         <div className='header-container'>
-            <div><p className='header-logo'>Beatton</p></div>
+            <div><p className='header-logo'><Link to="/">Beatton</Link></p></div>
             <div className='header-links'>
                 <a href=""><p>Shop</p></a>
-                <a href=""><p>About</p></a>
+                <Link to="about"><p>About</p></Link>
                 <a href=""><p>Contact</p></a>
             </div>
             <div className='header-icons'>

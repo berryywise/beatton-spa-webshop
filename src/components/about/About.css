@@ -1,0 +1,70 @@
+:root {
+  --primary-text-color: ;
+  --secondary-text-color: #868584;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10% 0;
+}
+
+.about-body {
+  max-width: 70vw;
+}
+
+.about-main-title {
+  position: relative;
+  font-size: 3.8vw;
+  padding: 10% 0;
+  z-index: 1;
+}
+
+.about-intro,
+.about-footer {
+  color: var(--secondary-text-color);
+}
+
+.about-first,
+.about-second {
+  position: absolute;
+  width: 12vw;
+  opacity: 0.9;
+}
+
+.about-first {
+  left: 22%;
+  bottom: 55%;
+}
+
+.about-second {
+  left: 60%;
+  top: 45%;
+}
+
+@media (max-width: 480px) {
+
+    .about-body {
+        max-width: 94vw;
+    }
+
+  .about-main-title {
+    font-size: 6.8vw;
+    
+  }
+
+  .about-first, .about-second {
+    opacity: 0.5;
+  }
+
+  .about-first {
+    left: 14%;
+    bottom: 77%;
+  }
+
+  .about-second {
+    left: 70%;
+    top: 32%;
+  }
+}
