@@ -1,4 +1,3 @@
-import React from 'react';
 import "./Footer.css"
 
 export const FooterBanner = () => {
@@ -14,35 +13,37 @@ export const FooterBanner = () => {
     )
 }
 
-//TODO Implement flexbox and layout here!
-
 const Footer = () => {
     return (
         <div className='footer-container'>
             <div className='footer-header'>
                 <div className='footer-address'>
                     <p>401 University</p>
+                    <p>Coral Gables</p>
+                    <p>FL 33134 US</p>
                 </div>
+                <div></div>
+                <div></div>
                 <div className='footer-links'>
-                    <p>Links</p>
-                    <p>Home</p>
-                    <p>Shop</p>
-                    <p>Shop</p>
-                    <p>Shop</p>
+                    <p className="footer-hide">Links</p>
+                    <a>Home</a>
+                    <a>Shop</a>
+                    <a>About</a>
+                    <a>Contact</a>
                 </div>
                 <div className='footer-help-links'>
-                    <p>Help</p>
-                    <p>Payment Options</p>
-                    <p>Payment Options</p>
-                    <p>Payment Options</p>
+                    <p className="footer-hide">Help</p>
+                    <a>Payment Options</a>
+                    <a>Returns</a>
+                    <a>Privacy Policy</a>
                 </div>
                 <div className='footer-credits'>
-                    <p>Beatton 2023</p>
-                    <p>Beatton 2023</p>
+                    <p>Beatton 2023 ©</p>
+                    <p>All Rights Reserved</p>
                 </div>
             </div>
             <div className='footer-title-container'>
-                <p className='footer-title'>Beatton</p>
+                <p className='footer-banner-title'>Beatton</p>
             </div>
         </div>
     );
