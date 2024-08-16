@@ -1,0 +1,34 @@
+.error-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45vh;
+}
+
+.error-title {
+    position: relative;
+    font-size: 20vw;
+    z-index: 1;
+}
+
+.error-image {
+    position: absolute;
+    width: 8vw;
+    rotate: 200deg;
+    top: 32%;
+    left: 47%;
+}
+
+@media (max-width: 480px) {
+
+    .error-title {
+        font-size: 50vw;
+    }
+
+    .error-image {
+        width: 25vw;
+        top: 35%;
+        left: 43%;
+    }
+    
+}

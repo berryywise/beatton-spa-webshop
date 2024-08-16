@@ -19,7 +19,9 @@ const Header = () => {
                 <a href=""><img src={userIcon} alt="account icon" /></a>
                 <a href=""><img src={bagIcon} alt="cart icon" /></a>
             </div>
+            
         </div>
+        
     );
 }
 
