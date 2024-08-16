@@ -1,6 +1,6 @@
 import Footer from "../footer/Footer";
 import Header from "../header/Header";
-import "./Contaxt.css"
+import "./Contact.css"
 
 import contactFirst from "../../assets/contact-first.jpg"
 import contactSecond from "../../assets/contact-second.jpg"

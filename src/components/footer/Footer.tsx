@@ -6,7 +6,7 @@ export const FooterBanner = () => {
         <div className='footer-banner'>
             <div className='footer-form'>
                 <h3 className='footer-title'>Subscribe to our Newsletter</h3>
-                <input className='footer-input' type="text" placeholder='Your Email Address' />
+                <input className='footer-input' name="footer" type="text" placeholder='Your Email Address' />
             </div>
         </div>
     </div>

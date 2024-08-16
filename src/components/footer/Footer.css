@@ -1,9 +1,6 @@
-::placeholder {
+input[name="footer"]::placeholder {
     color: white;
   }
-
-
- 
 
 .footer-banner-container {
     background-image: url(/src/assets/footer.jpg);
