@@ -11,9 +11,9 @@ const Header = () => {
         <div className='header-container'>
             <div><p className='header-logo'><Link to="/">Beatton</Link></p></div>
             <div className='header-links'>
-                <a href=""><p>Shop</p></a>
-                <Link to="about"><p>About</p></Link>
-                <a href=""><p>Contact</p></a>
+                <Link to="/"><p>Shop</p></Link>
+                <Link to="/about"><p>About</p></Link>
+                <Link to="/contact"><p>Contact</p></Link>
             </div>
             <div className='header-icons'>
                 <a href=""><img src={searchIcon} alt="search icon" /></a>
