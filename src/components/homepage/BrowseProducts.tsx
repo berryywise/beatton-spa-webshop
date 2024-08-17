@@ -1,7 +1,10 @@
 import sortIcon from "../../assets/iconamoon--arrow-down-2-thin.svg"
 import "./Home.css"
 
-import slimTable from "../../assets/products/console-table.jpg"
+import { products, ProductArr } from "../products/products"
+
+
+
 
 const BrowserHeader = () => {
     return (
@@ -19,14 +22,14 @@ const BrowserHeader = () => {
 
 const BrowserBody = () => {
 
-    const Product = () => {
+    const Product = ({product}: { product: ProductArr}) => {
         return (
                 <>
-                  <img className="browse-product-img" src={slimTable} alt="product image" />
+                  <img className="browse-product-img" src={product.img} alt="product image" />
                 <div>
-                  <p className="browse-product-title">FRAXINUS</p>
-                  <p className="browse-product-description">Slim Console Table</p>
-                  <p className="browse-product-price">1.299 $</p>
+                  <p className="browse-product-title">{product.name}</p>
+                  <p className="browse-product-description">{product.description}</p>
+                  <p className="browse-product-price">{product.price}$</p>
                 </div>
                 </>
         )
@@ -38,25 +41,25 @@ const BrowserBody = () => {
 
            <div className="column">
            <div className="browse-product-container one">
-            <Product />
+            <Product product={products[0]} />
             </div>
             <div className="browse-product-container two">
-            <Product />
+            <Product product={products[1]} />
             </div>
             <div className="browse-product-container three">
-            <Product />
+            <Product product={products[2]} />
             </div>
 
            </div>
            <div className="column">
            <div className="browse-product-container four">
-            <Product />
+            <Product product={products[3]} />
             </div>
             <div className="browse-product-container five">
-            <Product />
+            <Product product={products[4]} />
             </div>
             <div className="browse-product-container six">
-            <Product />
+            <Product product={products[5]} />
             </div>
 
            </div>
@@ -64,15 +67,15 @@ const BrowserBody = () => {
 
             <div className="product-seven-eight">
               <div className="browse-product-container seven">
-              <Product />
+              <Product product={products[6]} />
               </div>
               <div className="browse-product-container eight">
-              <Product />
+              <Product product={products[7]} />
               </div>
             </div>
 
             <div className="browse-product-container nine">
-            <Product />
+            <Product product={products[8]} />
             </div>
            </div>
 

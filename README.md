@@ -13,6 +13,7 @@ Notepad - Components:
    - ✔ Shop (products) component with spread around items as design
    - ✔ Static banner
    - ✔Shared footer with logo - address - links
+   - Fix footer typos
    - Fetch products from furnitureAPI.
 
   - Contact components:
