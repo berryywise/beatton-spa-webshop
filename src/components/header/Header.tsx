@@ -5,8 +5,8 @@ import searchIcon from "../../assets/iconamoon--search-thin.svg"
 import "./Header.css";
 import { Link } from "react-router-dom";
 
-
 const Header = () => {
+
     return (
         <div className='header-container'>
             <div><p className='header-logo'><Link to="/">Beatton</Link></p></div>
@@ -18,7 +18,7 @@ const Header = () => {
             <div className='header-icons'>
                 <a href=""><img src={searchIcon} alt="search icon" /></a>
                 <a href=""><img src={userIcon} alt="account icon" /></a>
-                <a href=""><img src={bagIcon} alt="cart icon" /></a>
+                <p className="header-cart"><img src={bagIcon} alt="cart icon" /></p>
             </div>
             
         </div>

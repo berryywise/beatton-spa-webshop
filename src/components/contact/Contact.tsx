@@ -5,6 +5,7 @@ import "./Contact.css"
 import contactFirst from "../../assets/contact-first.jpg"
 import contactSecond from "../../assets/contact-second.jpg"
 import contactThird from "../../assets/contact-third.jpg"
+import Cart from "../cart/Cart";
 
 const ContactBody = () => {
     return (
@@ -36,6 +37,7 @@ const Contact = () => {
         <Header />
         <ContactBody />
         <Footer />
+        <Cart />
         </>
     );
 }

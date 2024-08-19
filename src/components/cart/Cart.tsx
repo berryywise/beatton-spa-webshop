@@ -1,5 +1,3 @@
-import React from "react";
-
 import "./Cart.css";
 import placeholder from "../../assets/products/console-table.jpg";
 
@@ -33,7 +31,7 @@ const Cart = () => {
   return (
     <div className="cart-container">
       <div className="cart-header">
-        <p className="cart-title">Cart(2)</p>
+        <p className="cart-title">Cart (2)</p>
         <p className="cart-close-button">X</p>
       </div>
       <div className="cart-body">

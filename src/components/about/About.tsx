@@ -4,6 +4,7 @@ import Header from "../header/Header";
 
 import aboutFirst from "../../assets/about-first.jpg"
 import aboutSecond from "../../assets/about-second.jpg"
+import Cart from "../cart/Cart";
 
 const AboutContainer = () => {
   return (
@@ -32,6 +33,7 @@ const About = () => {
       <Header />
       <AboutContainer />
       <Footer />
+      {/* <Cart /> */}
     </>
   );
 };

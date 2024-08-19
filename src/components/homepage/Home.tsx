@@ -5,6 +5,7 @@ import '../../App.css'
 import Banner from './Banner';
 import BrowseProducts from './BrowseProducts';
 import Footer, { FooterBanner } from '../footer/Footer';
+import Cart from '../cart/Cart';
 
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
         <BrowseProducts />
         <FooterBanner />
         <Footer />
+        {/* <Cart /> */}
         </>
     );
 }

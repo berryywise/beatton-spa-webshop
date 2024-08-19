@@ -22,10 +22,6 @@ const router = createBrowserRouter([
     path: "/contact",
     element: <Contact />
   },
-  {
-    path: "/cart",
-    element: <Cart />
-  }
 ]);
 
 createRoot(document.getElementById("root")!).render(

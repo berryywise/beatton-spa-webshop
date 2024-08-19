@@ -32,6 +32,10 @@
     height: auto;
 }
 
+.header-cart {
+    cursor: pointer;
+}
+
 @media (max-width: 480px) {
 
     .header-links {
