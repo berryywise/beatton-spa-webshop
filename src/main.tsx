@@ -6,6 +6,7 @@ import Home from "./components/homepage/Home.tsx";
 import ErrorPage from "./components/misc/ErrorPage.tsx";
 import About from "./components/about/About.tsx";
 import Contact from "./components/contact/Contact.tsx";
+import Cart from "./components/cart/Cart.tsx";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <Contact />
+  },
+  {
+    path: "/cart",
+    element: <Cart />
   }
 ]);
 

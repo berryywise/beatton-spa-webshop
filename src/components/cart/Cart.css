@@ -1,0 +1,6 @@
+.cart-container {
+    width: 33vw;
+    background-color: red;
+    border: 1.5px solid black;
+    height: 100vh;
+}
