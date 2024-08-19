@@ -39,8 +39,12 @@ const Cart = () => {
         <CartItems />
       </div>
       <div className="cart-footer">
-        <p className="cart-footer-title">Estimated shipping within 10 - 14 working days</p>
-        <button className="cart-footer-button">Checkout <span className="cart-footer-total">( $ 2.598 )</span></button>
+        <p className="cart-footer-title">
+          Estimated shipping within 10 - 14 working days
+        </p>
+        <button className="cart-footer-button">
+          Checkout <span className="cart-footer-total">( $ 2.598 )</span>
+        </button>
       </div>
     </div>
   );

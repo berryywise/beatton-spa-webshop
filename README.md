@@ -2,47 +2,50 @@ Webshop - Add to cart | Made with React - React Router - Typescript - Vite.
 
 The main point of this project is to implement a add to cart functionality, which shares the cart among a SPA with react router.
 
-Notepad - Components: 
+Notepad - Components:
 
-  - Cherry on top; try to find look a like font styles for entire app.
+- Cherry on top; try to find look a like font styles for entire app.
+- Fix image loading
 
-  - Homepage components: 
+- Homepage components:
 
-   - ✔ Shared Header component with logo - Shop, About, Contact - Placeholders -> Serach, Profile - Cart (shopping bag)
-   - ✔ Banner 
-   - ✔ Shop (products) component with spread around items as design
-   - ✔ Static banner
-   - ✔Shared footer with logo - address - links
-   - Fix footer typos
-   - Fetch products from furnitureAPI.
+- ✔ Shared Header component with logo - Shop, About, Contact - Placeholders -> Serach, Profile - Cart (shopping bag)
+- ✔ Banner
+- ✔ Shop (products) component with spread around items as design
+- ✔ Static banner
+- ✔Shared footer with logo - address - links
+- Fix footer typos (e.g. address in mobile mode)
 
-  - Contact components:
-   
-   - ✔ Shared header
-   - ✔ Left side pictures with adress
-   - ✔ Right side form
-   - ✔ Shared footer
+- Contact components:
 
-  - About components:
+- ✔ Shared header
+- ✔ Left side pictures with adress
+- ✔ Right side form
+- ✔ Shared footer
 
-   - ✔ Shared header
-   - ✔ Main component with two pictures and text
-   - ✔ Shared footer
+- About components:
 
-  - Cart components:
+- ✔ Shared header
+- ✔ Main component with two pictures and text
+- ✔ Shared footer
 
-    - Cart header with title (containing amount of items) and close cart button
-    - Product component which is rendered twice - Contains image, title and description, quantity button, price and remove button.
-    - Footer with estimated shipping time and checkout button with price.
+- Cart components:
+
+  - ✔ Cart header with title (containing amount of items) and close cart button
+  - ✔ Product component which is rendered twice - Contains image, title and description, quantity button, price and remove button.
+  - ✔ Footer with estimated shipping time and checkout button with price.
+  - Interactive buttons
+  - Global state management using contextAPI
+  - Link cart toggle to header component
 
 - Pages:
 
   - ✔ Homepage
-  - ✔ About 
+  - ✔ About
   - ✔ Contact
   - ✔ 404 page
 
-----------------------------------------------------------------------------------------------------------------------------------------
+---
 
 ✔ - You should have at least two pages (a home page and a shop page, which includes your shopping cart). Let the user navigate between the pages with a navigation bar, which will be shown on both pages.
 
