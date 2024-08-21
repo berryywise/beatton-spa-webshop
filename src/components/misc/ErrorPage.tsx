@@ -1,4 +1,4 @@
-import errorImg from "../../assets/errorpage.jpg"
+import errorImg from "/errorpage.jpg"
 import Footer from "../footer/Footer"
 import Header from "../header/Header"
 import "./ErrorPage.css"

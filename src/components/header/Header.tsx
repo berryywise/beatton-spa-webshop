@@ -1,11 +1,16 @@
-import bagIcon from "../../assets/ph--handbag-thin.svg"
-import userIcon from "../../assets/ph--user-thin.svg"
-import searchIcon from "../../assets/iconamoon--search-thin.svg"
-
 import "./Header.css";
+
+import bagIcon from "/ph--handbag-thin.svg"
+import userIcon from "/ph--user-thin.svg"
+import searchIcon from "/iconamoon--search-thin.svg"
+
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../cart/CartProvider";
 
 const Header = () => {
+
+    const {toggleCart} = useContext(CartContext)
 
     return (
         <div className='header-container'>
@@ -18,7 +23,7 @@ const Header = () => {
             <div className='header-icons'>
                 <a href=""><img src={searchIcon} alt="search icon" /></a>
                 <a href=""><img src={userIcon} alt="account icon" /></a>
-                <p className="header-cart"><img src={bagIcon} alt="cart icon" /></p>
+                <p onClick={toggleCart} className="header-cart"><img src={bagIcon} alt="cart icon" /></p>
             </div>
             
         </div>

@@ -1,4 +1,4 @@
-import firstImg from "../../assets/products/console-table.jpg"
+import firstImg from "/products/console-table.jpg"
 
 
 export interface ProductArr {

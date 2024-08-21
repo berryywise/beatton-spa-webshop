@@ -1,4 +1,4 @@
-import sortIcon from "../../assets/iconamoon--arrow-down-2-thin.svg"
+import sortIcon from "/iconamoon--arrow-down-2-thin.svg"
 import "./Home.css"
 
 import { products, ProductArr } from "../products/products"
@@ -25,7 +25,7 @@ const BrowserBody = () => {
     const Product = ({product}: { product: ProductArr}) => {
         return (
                 <>
-                  <img className="browse-product-img" src={product.img} alt="product image" />
+                  <img className="browse-product-img" width="150px" height="auto" src={product.img} alt="product image" />
                 <div>
                   <p className="browse-product-title">{product.name}</p>
                   <p className="browse-product-description">{product.description}</p>

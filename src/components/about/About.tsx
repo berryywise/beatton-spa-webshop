@@ -2,11 +2,14 @@ import "./About.css";
 import Footer from "../footer/Footer";
 import Header from "../header/Header";
 
-import aboutFirst from "../../assets/about-first.jpg";
-import aboutSecond from "../../assets/about-second.jpg";
+import aboutFirst from "../../../public/about-first.jpg";
+import aboutSecond from "../../../public/about-second.jpg";
 import Cart from "../cart/Cart";
+import { useContext } from "react";
+import { CartContext } from "../cart/CartProvider";
 
 const AboutContainer = () => {
+  
   return (
     <div className="about-container">
       <div className="about-intro">
@@ -34,12 +37,16 @@ const AboutContainer = () => {
 };
 
 const About = () => {
+
+  const {toggled} = useContext(CartContext);
+  
+
   return (
     <>
       <Header />
       <AboutContainer />
       <Footer />
-      /* <Cart /> */
+      {toggled && <Cart />}
     </>
   );
 };

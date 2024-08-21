@@ -3,7 +3,7 @@ input[name="footer"]::placeholder {
   }
 
 .footer-banner-container {
-    background-image: url(/src/assets/footer.jpg);
+    background-image: url(/footer.jpg);
     background-size: cover;
     width: 100%;
     aspect-ratio: 3.8 / 2;
@@ -112,9 +112,15 @@ input[name="footer"]::placeholder {
     
     }
 
+    .footer-address {
+        order: 3;
+        padding: 8% 0;
+    }
+
     .footer-credits {
         padding-top: 5%;
         font-size: 3vw;
+        order: 4;
     }
 
     .footer-hide {

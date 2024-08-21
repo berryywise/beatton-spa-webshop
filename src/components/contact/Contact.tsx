@@ -1,11 +1,15 @@
-import Footer from "../footer/Footer";
-import Header from "../header/Header";
 import "./Contact.css";
 
-import contactFirst from "../../assets/contact-first.jpg";
-import contactSecond from "../../assets/contact-second.jpg";
-import contactThird from "../../assets/contact-third.jpg";
+import Footer from "../footer/Footer";
+import Header from "../header/Header";
 import Cart from "../cart/Cart";
+
+import contactFirst from "/contact-first.jpg";
+import contactSecond from "/contact-second.jpg";
+import contactThird from "/contact-third.jpg";
+
+import { useContext } from "react";
+import { CartContext } from "../cart/CartProvider";
 
 const ContactBody = () => {
   return (
@@ -56,12 +60,15 @@ const ContactBody = () => {
 };
 
 const Contact = () => {
+
+  const {toggled} = useContext(CartContext);
+
   return (
     <>
       <Header />
       <ContactBody />
       <Footer />
-      <Cart />
+      {toggled && <Cart />}
     </>
   );
 };

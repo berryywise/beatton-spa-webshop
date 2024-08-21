@@ -8,12 +8,12 @@ https://www.behance.net/gallery/191969817/E-commerce-Beatton
 
 --------------------------------------------------------------------------
 
-The main point of this project is to implement a dynamic add to cart functionality with global state management (contextAPI).
+The main point of this project is to implement a dynamic add to cart functionality with global state management (react context).
 
 Notepad:
 
 - Cherry on top; try to find look a like font styles for entire app.
-- Fix image loading
+- Fix image loading (site speed)
 
 - Homepage components:
 
@@ -22,7 +22,7 @@ Notepad:
 - ✔ Shop (products) component with spread around items as design
 - ✔ Static banner
 - ✔ Shared footer with logo - address - links
-- Fix footer typos (e.g. address in mobile mode)
+- ✔ Fix footer typos (e.g. address in mobile mode)
 
 - Contact components:
 
@@ -43,7 +43,7 @@ Notepad:
   - ✔ Product component which is rendered twice - Contains image, title and description, quantity button, price and remove button.
   - ✔ Footer with estimated shipping time and checkout button with price.
   - Interactive buttons
-  - Global state management using contextAPI
+  - Global state management using context
   - Link cart toggle to header component
 
 - Pages:

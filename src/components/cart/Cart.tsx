@@ -1,7 +1,11 @@
 import "./Cart.css";
-import placeholder from "../../assets/products/console-table.jpg";
+import placeholder from "/products/console-table.jpg";
+import { useContext } from "react";
+import { CartContext } from "./CartProvider";
+
 
 const CartItems = () => {
+
   return (
     <div className="cart-items-body">
       <div className="cart-image-body">
@@ -28,11 +32,14 @@ const CartItems = () => {
 };
 
 const Cart = () => {
+
+const { toggleCart } = useContext(CartContext);
+
   return (
     <div className="cart-container">
       <div className="cart-header">
         <p className="cart-title">Cart (2)</p>
-        <p className="cart-close-button">X</p>
+        <p onClick={toggleCart} className="cart-close-button">X</p>
       </div>
       <div className="cart-body">
         <CartItems />
