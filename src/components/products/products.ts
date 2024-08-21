@@ -1,4 +1,13 @@
-import firstImg from "/products/console-table.jpg"
+import zeroImg from "/products/zeroimg.jpg"
+import firstImg from "/products/firstimg.jpg"
+import secondImg from "/products/secondimg.jpg"
+import thirdImg from "/products/thirdimg.jpg"
+import fourthImg from "/products/fourthimg.jpg"
+import fifthImg from "/products/fifthimg.jpg"
+import sixthImg from "/products/sixthimg.jpg"
+import seventhImg from "/products/seventhimg.jpg"
+import eightImg from "/products/eightimg.jpg"
+
 
 
 export interface ProductArr {
@@ -14,7 +23,7 @@ export const products: ProductArr[] = [
        id: 0,
        name: "FRAXINUS",
        description: "Slim Console Table",
-       img: firstImg,
+       img: zeroImg,
        price: 1.299
     },
     {
@@ -28,49 +37,49 @@ export const products: ProductArr[] = [
         id: 2,
         name: "AGORA",
         description: "Mini Side Table",
-        img: firstImg,
+        img: secondImg,
         price: 499
      },
      {
         id: 3,
         name: "GRIFFO",
         description: "Barcalona Chair",
-        img: firstImg,
+        img: thirdImg,
         price: 1.599
      },
      {
         id: 4,
         name: "ARAMDO",
         description: "Block Media Console",
-        img: firstImg,
+        img: fourthImg,
         price: 1.699
      },
      {
         id: 5,
         name: "HELENA",
         description: "Round Coffee Table",
-        img: firstImg,
+        img: fifthImg,
         price: 1.299
      },
      {
         id: 6,
         name: "MUGGO",
         description: "Mini Side Table",
-        img: firstImg,
+        img: sixthImg,
         price: 999
      },
      {
         id: 7,
         name: "LOLITO",
         description: "Round Coffee Table",
-        img: firstImg,
+        img: seventhImg,
         price: 1.199
      },
      {
         id: 8,
         name: "SIMONE",
         description: "Marvel Side Table",
-        img: firstImg,
+        img: eightImg,
         price: 899
      }
 ]

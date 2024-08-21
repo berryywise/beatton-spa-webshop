@@ -15,9 +15,10 @@
 
 .home-banner{
     position: relative;
-    background-image: url(/banner-homepage.jpeg);
+    background-image: url(/banner-homepage.jpg);
     background-size: cover;
     width: 100%;
+    background-position: center 75%;
     aspect-ratio: 3.8 / 2;
 }
 
@@ -78,6 +79,14 @@
     width: 100%;
 }
 
+.browse-product-container.one, .browse-product-container.three, .browse-product-container.five {
+    align-items: flex-end;
+}
+
+.browse-product-container.two, .browse-product-container.four, .browse-product-container.six, .browse-product-container.nine {
+    align-items: flex-start;
+}
+
 .two img, .four img, .nine img {
     width: 75%;
 }
@@ -99,6 +108,7 @@
 }
 
 .browse-product-title {
+    font-family: hattonlight;   
     font-weight: bold;
 }
 
