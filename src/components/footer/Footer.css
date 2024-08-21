@@ -2,6 +2,16 @@ input[name="footer"]::placeholder {
     color: white;
   }
 
+@font-face {
+    font-family: hattonmedium;
+    src: url(/src/assets/hatton-medium.otf) format("opentype");;
+}
+
+@font-face {
+    font-family: hattonlight;
+    src: url(/src/assets/hatton-light.otf) format("opentype");;
+}
+
 .footer-banner-container {
     background-image: url(/footer.jpg);
     background-size: cover;
@@ -32,6 +42,7 @@ input[name="footer"]::placeholder {
 
 .footer-title {
     font-size: 3vw;
+    font-family: hattonlight;
 }
 
 .footer-input {
@@ -90,7 +101,8 @@ input[name="footer"]::placeholder {
 }
 
 .footer-banner-title {
-    font-size: 27vw;
+    font-size: 20vw;
+    font-family: hattonmedium;
 }
 
 @media (max-width: 480px) {

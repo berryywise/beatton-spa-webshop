@@ -3,6 +3,16 @@
   --secondary-text-color: #868584;
 }
 
+@font-face {
+  font-family: hattonmedium;
+  src: url(/src/assets/hatton-medium.otf) format("opentype");;
+}
+
+@font-face {
+  font-family: hattonlight;
+  src: url(/src/assets/hatton-light.otf) format("opentype");;
+}
+
 .cart-container {
   width: 33vw;
   display: flex;
@@ -29,6 +39,8 @@
 .cart-title,
 .cart-close-button {
   font-size: 2vw;
+  font-family: hattonlight;
+  font-weight: bold;
 }
 
 .cart-close-button {

@@ -43,8 +43,8 @@ Notepad:
   - ✔ Product component which is rendered twice - Contains image, title and description, quantity button, price and remove button.
   - ✔ Footer with estimated shipping time and checkout button with price.
   - Interactive buttons
-  - Global state management using context
-  - Link cart toggle to header component
+  - ✔ Global state management using context
+  - ✔ Link cart toggle to header component
 
 - Pages:
 

@@ -2,8 +2,13 @@ import errorImg from "/errorpage.jpg"
 import Footer from "../footer/Footer"
 import Header from "../header/Header"
 import "./ErrorPage.css"
+import Cart from "../cart/Cart"
+import { useContext } from "react"
+import { CartContext } from "../cart/CartProvider"
 
 const ErrorPage = () => {
+
+    const {toggled} = useContext(CartContext);
 
     return (
         <>
@@ -15,6 +20,7 @@ const ErrorPage = () => {
 
         </div>
         <Footer/>
+        {toggled && <Cart />}
         </>
     );
 }

@@ -1,3 +1,13 @@
+@font-face {
+    font-family: hattonmedium;
+    src: url(/src/assets/hatton-medium.otf) format("opentype");;
+}
+
+@font-face {
+    font-family: hattonlight;
+    src: url(/src/assets/hatton-light.otf) format("opentype");;
+}
+
 .error-page-container {
     display: flex;
     justify-content: center;
@@ -9,6 +19,7 @@
     position: relative;
     font-size: 20vw;
     z-index: 1;
+    font-family: hattonlight;
 }
 
 .error-image {

@@ -3,6 +3,16 @@
     --secondary-text-color: #868584;
 }
 
+@font-face {
+    font-family: hattonmedium;
+    src: url(/src/assets/hatton-medium.otf) format("opentype");;
+}
+
+@font-face {
+    font-family: hattonlight;
+    src: url(/src/assets/hatton-light.otf) format("opentype");;
+}
+
 .home-banner{
     position: relative;
     background-image: url(/banner-homepage.jpeg);
@@ -21,10 +31,11 @@
 
 .overlay-text {
     position: absolute;
-    font-size: 27vw;
-    top: 50%;
-    left: 7%;
+    font-size: 23vw;
+    top: 55%;
+    left: 3%;
     color: #FFF9F9;
+    font-family: hattonmedium;
 }
 
 .browse-container {
@@ -42,7 +53,7 @@
 
 .browse-title {
     font-size: 5vw;
-    font-weight: 100;
+    font-family: hattonlight;
 }
 
 .browse-icons {

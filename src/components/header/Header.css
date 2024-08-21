@@ -1,5 +1,15 @@
+@font-face {
+    font-family: hattonmedium;
+    src: url(/src/assets/hatton-medium.otf) format("opentype");;
+}
+
+@font-face {
+    font-family: hattonlight;
+    src: url(/src/assets/hatton-light.otf) format("opentype");;
+}
+
 .header-logo {
-    font-family: Acumin-Pro;
+    font-family: hattonmedium;
     font-size: 1.5rem;
 }
 
