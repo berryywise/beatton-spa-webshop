@@ -54,7 +54,7 @@ const CartItems = () => {
               <p>${product.price}</p>
               <p onClick={(event) => handleRemove(event, product.id)} className="cart-remove-title">Remove</p>
               <p className="cart-remove-svg">
-              <img src={trashcan} alt="remove icon" width="22px" />
+              <img onClick={(event) => handleRemove(event, product.id)}  src={trashcan} alt="remove icon" width="22px" />
               </p>
             </div>
           </div>
@@ -81,6 +81,7 @@ const Cart = () => {
       </div>
       <div className="cart-body">
         <CartItems />
+        {cart.length === 0 && <p>No items added to cart.</p>}
       </div>
       <div className="cart-footer">
         <p className="cart-footer-title">

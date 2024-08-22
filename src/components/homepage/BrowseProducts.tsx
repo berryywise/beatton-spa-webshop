@@ -5,6 +5,8 @@ import { products, ProductArr } from "../products/products";
 import React, { useContext } from "react";
 import { CartContext, CartInterface } from "../cart/CartProvider";
 
+import Swal from "sweetalert2";
+
 const BrowserHeader = () => {
   return (
     <div className="browse-header">
@@ -21,7 +23,9 @@ const BrowserHeader = () => {
 
 const BrowserBody = () => {
 
+
   const { addToCart } = useContext(CartContext);
+
 
   const handleAddItem = (event: React.MouseEvent, product: ProductArr) => {
 
@@ -29,11 +33,17 @@ const BrowserBody = () => {
 
     const newProduct: CartInterface = { ...product, quantity: 1 };
     addToCart(newProduct);
+    Swal.fire({
+        title: "Added to cart!",
+        icon: "success",
+        confirmButtonColor: "#1f1f1f"
+      });
   };
+  
 
   const Product = ({ product }: { product: ProductArr }) => {
     return (
-      <div onClick={(event) => handleAddItem(event, product)} key={product.id}>
+      <div className="browse-product-container" onClick={(event) => handleAddItem(event, product)} key={product.id}>
         <img
           className="browse-product-img"
           width="150px"

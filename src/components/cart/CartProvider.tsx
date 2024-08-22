@@ -1,5 +1,4 @@
 import { createContext, ReactNode, useState } from "react";
-import { products } from "../products/products";
 
 //Init interface for context props, tell typescript what the context props will receive as structure.
 
@@ -44,11 +43,9 @@ export const CartContext = createContext<ContextProps>({
 //CartProvider which wraps around the entire wrap and functions as a global cart state management system. Any extra cart functions go into this function.
 
 export const CartProvider = ({ children }: ProviderProps) => {
-  const productOne = { ...products[0], quantity: 1 };
-  const productTwo = { ...products[1], quantity: 1 };
 
   const [toggled, setToggled] = useState(false);
-  const [cart, setCart] = useState<CartInterface[]>([productOne, productTwo]);
+  const [cart, setCart] = useState<CartInterface[]>([]);
 
   const toggleCart = () => {
     setToggled(!toggled);
