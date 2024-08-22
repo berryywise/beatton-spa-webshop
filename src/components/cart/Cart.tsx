@@ -5,6 +5,8 @@ import { CartContext } from "./CartProvider";
 
 const CartItems = () => {
 
+  //Get the cart state and update functions from CartContext context.
+
   const { cart, removeFromCart, incrementCart, decrementCart } = useContext(CartContext);
 
   const handleRemove = (event: React.MouseEvent, productId: number) => {

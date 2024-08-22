@@ -1,6 +1,8 @@
 import { createContext, ReactNode, useState } from "react";
 import { products } from "../products/products";
 
+//Init interface for context props, tell typescript what the context props will receive as structure.
+
 interface ContextProps {
   toggled: boolean;
   toggleCart: () => void;
@@ -11,9 +13,13 @@ interface ContextProps {
   decrementCart: (id: number) => void;
 }
 
+//Provider interface which makes it possible to wrap the children (a.k.a entire application).
+
 interface ProviderProps {
   children: ReactNode;
 }
+
+//Export cart interface for future products to be added to cart.
 
 export interface CartInterface {
   id: number;
@@ -24,6 +30,7 @@ export interface CartInterface {
   img: string;
 }
 
+//CartContext itself being made and initliazed with default values for the interface.
 export const CartContext = createContext<ContextProps>({
   toggled: false,
   toggleCart: () => {},
@@ -34,12 +41,15 @@ export const CartContext = createContext<ContextProps>({
   decrementCart: () => {},
 });
 
-export const CartProvider = ({ children }: ProviderProps) => {
-  const [toggled, setToggled] = useState(false);
+//CartProvider which wraps around the entire wrap and functions as a global cart state management system. Any extra cart functions go into this function.
 
+export const CartProvider = ({ children }: ProviderProps) => {
+
+  
   const productOne = { ...products[0], quantity: 1 };
   const productTwo = { ...products[1], quantity: 1 };
-
+  
+  const [toggled, setToggled] = useState(false);
   const [cart, setCart] = useState<CartInterface[]>([productOne, productTwo]);
 
   const toggleCart = () => {
@@ -64,12 +74,15 @@ export const CartProvider = ({ children }: ProviderProps) => {
 
   const decrementCart = (id: number) => {
     setCart((prevCart) =>
-      prevCart.map((item) =>
-        item.id === id ? { ...item, quantity: item.quantity - 1 } : item
-      )
-      .filter(item => item.quantity > 0)
+      prevCart
+        .map((item) =>
+          item.id === id ? { ...item, quantity: item.quantity - 1 } : item
+        )
+        .filter((item) => item.quantity > 0)
     );
   };
+
+  //Return the CartContext which "Provides" all of the cart props.
 
   return (
     <CartContext.Provider
