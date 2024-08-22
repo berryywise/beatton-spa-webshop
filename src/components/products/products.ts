@@ -73,7 +73,7 @@ export const products: ProductArr[] = [
         name: "LOLITO",
         description: "Round Coffee Table",
         img: seventhImg,
-        price: 1.199
+        price: 1199
      },
      {
         id: 8,

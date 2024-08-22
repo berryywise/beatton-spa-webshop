@@ -44,11 +44,9 @@ export const CartContext = createContext<ContextProps>({
 //CartProvider which wraps around the entire wrap and functions as a global cart state management system. Any extra cart functions go into this function.
 
 export const CartProvider = ({ children }: ProviderProps) => {
-
-  
   const productOne = { ...products[0], quantity: 1 };
   const productTwo = { ...products[1], quantity: 1 };
-  
+
   const [toggled, setToggled] = useState(false);
   const [cart, setCart] = useState<CartInterface[]>([productOne, productTwo]);
 
@@ -57,7 +55,15 @@ export const CartProvider = ({ children }: ProviderProps) => {
   };
 
   const addToCart = (cartItem: CartInterface) => {
-    setCart([...cart, cartItem]);
+
+    const existingItem = cart.find((item) => item.id === cartItem.id);
+
+    if(existingItem) {
+      incrementCart(cartItem.id)
+    } else {
+      setCart([...cart, cartItem])
+    }
+
   };
 
   const removeFromCart = (id: number) => {

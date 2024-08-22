@@ -12,8 +12,7 @@ The main point of this project is to implement a dynamic add to cart functionali
 
 Notepad:
 
-- Cherry on top; try to find look a like font styles for entire app.
-- Fix image loading (site speed)
+- ✔ Cherry on top; try to find look a like font styles for entire app.
 
 - Homepage components:
 
@@ -42,7 +41,7 @@ Notepad:
   - ✔ Cart header with title (containing amount of items) and close cart button
   - ✔ Product component which is rendered twice - Contains image, title and description, quantity button, price and remove button.
   - ✔ Footer with estimated shipping time and checkout button with price.
-  - Interactive buttons
+  - ✔ Interactive buttons
   - ✔ Global state management using context
   - ✔ Link cart toggle to header component
 
@@ -65,6 +64,6 @@ A roadmap from The Odin Project:
 
 ✔ - Build individual card elements for each of your products. Display an input field on it, which lets a user manually type in how many items they want to buy. Also, add an increment and decrement button next to it for fine-tuning. You can also display a title for each product as well as an “Add To Cart” button.
 
-- Once a user has submitted their order, the amount on the cart itself should adjust accordingly.
+✔ - Once a user has submitted their order, the amount on the cart itself should adjust accordingly.
 
 ✔ - As usual, style your application so you can show it off! You have a host of options provided already.
