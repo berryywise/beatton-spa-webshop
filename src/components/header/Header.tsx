@@ -10,7 +10,9 @@ import { CartContext } from "../cart/CartProvider";
 
 const Header = () => {
 
-    const {toggleCart} = useContext(CartContext)
+    const {cart, toggleCart} = useContext(CartContext)
+
+    const cartTotalItems = cart.reduce ((acc, item) => acc + item.quantity, 0)
 
     return (
         <div className='header-container'>
@@ -23,7 +25,10 @@ const Header = () => {
             <div className='header-icons'>
                 <a href=""><img src={searchIcon} alt="search icon" /></a>
                 <a href=""><img src={userIcon} alt="account icon" /></a>
-                <p onClick={toggleCart} className="header-cart"><img src={bagIcon} alt="cart icon" /></p>
+                <div onClick={toggleCart} className="header-cart">
+                    <img src={bagIcon} alt="cart icon" />
+                    {cart && <p className="header-cart-quantity">{cartTotalItems}</p>}
+                </div>
             </div>
             
         </div>

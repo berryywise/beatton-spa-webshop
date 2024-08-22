@@ -67,11 +67,12 @@ const Cart = () => {
   const { cart } = useContext(CartContext);
 
   const cartPrice = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  const cartTotalItems = cart.reduce ((acc, item) => acc + item.quantity, 0)
 
   return (
     <div className="cart-container">
       <div className="cart-header">
-        <p className="cart-title">Cart ({cart.length})</p>
+        <p className="cart-title">Cart ({cartTotalItems})</p>
         <p onClick={toggleCart} className="cart-close-button">
           X
         </p>
