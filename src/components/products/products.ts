@@ -24,14 +24,14 @@ export const products: ProductArr[] = [
        name: "FRAXINUS",
        description: "Slim Console Table",
        img: zeroImg,
-       price: 1.299
+       price: 1299
     },
     {
         id: 1,
         name: "SALIEVO",
         description: "Chalet Natural Sofa",
         img: firstImg,
-        price: 3.699
+        price: 3699
      },
      {
         id: 2,
@@ -45,21 +45,21 @@ export const products: ProductArr[] = [
         name: "GRIFFO",
         description: "Barcalona Chair",
         img: thirdImg,
-        price: 1.599
+        price: 1599
      },
      {
         id: 4,
         name: "ARAMDO",
         description: "Block Media Console",
         img: fourthImg,
-        price: 1.699
+        price: 1699
      },
      {
         id: 5,
         name: "HELENA",
         description: "Round Coffee Table",
         img: fifthImg,
-        price: 1.299
+        price: 1299
      },
      {
         id: 6,

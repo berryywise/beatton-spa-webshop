@@ -51,6 +51,7 @@
 .cart-body {
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 .cart-items-body {
@@ -123,6 +124,10 @@
   cursor: pointer;
 }
 
+.cart-remove-svg {
+  display: none;
+}
+
 @media (max-width: 480px) {
   .cart-container {
     width: 100vw;
@@ -146,6 +151,9 @@
   .cart-remove-title {
     display: none;
   }
+  .cart-remove-svg {
+    display: inline;
+  }
 }
 
 @media (min-width: 480px) and (max-width: 1080px) {
@@ -165,5 +173,9 @@
 
   .cart-remove-title {
     display: none;
+  }
+
+  .cart-remove-svg {
+    display: inline;
   }
 }
