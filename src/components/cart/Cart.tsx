@@ -1,4 +1,5 @@
 import "./Cart.css";
+import trashcan from "/trash-can.svg"
 import placeholder from "/products/console-table.jpg";
 import { useContext } from "react";
 import { CartContext } from "./CartProvider";
@@ -19,13 +20,14 @@ const CartItems = () => {
         <div className="cart-quantity-info">
           <p className="cart-quantity-title">Quantity</p>
           <button className="cart-quantity-minus">-</button>
-          <input type="text" className="cart-quantity-input" placeholder="1" />
+          <p className="cart-quantity-input">1</p>
           <button className="cart-quantity-plus">+</button>
         </div>
       </div>
       <div className="cart-right-body">
         <p>$1.599</p>
         <p className="cart-remove-title">Remove</p>
+        <p className="cart-remove-svg"><img src={trashcan} alt="remove icon" width="22px" /></p>
       </div>
     </div>
   );
