@@ -108,6 +108,10 @@ input[name="footer"]::placeholder {
 
 @media (max-width: 480px) {
 
+    .footer-container {
+        font-size: 3vw;
+    }
+
     .footer-header {
         padding-top: 15%;
         display: flex;

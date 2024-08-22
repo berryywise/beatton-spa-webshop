@@ -47,7 +47,7 @@
 
 .about-first {
   left: 22%;
-  bottom: 55%;
+  top: 22%;
 }
 
 .about-second {
@@ -71,7 +71,7 @@
 
   .about-first {
     left: 19%;
-    bottom: 68%;
+    top: 68%;
   }
 
   .about-second {
@@ -82,4 +82,20 @@
   .about-container {
     padding: 10%;
   }
+}
+
+@media (min-width: 480px) and (max-width: 1080px) {
+
+  .about-container {
+    margin: 10% 0;
+  }
+
+  .about-first {
+    top: 68%;
+  }
+
+  .about-second {
+    top: 98%;
+  }
+ 
 }
