@@ -5,12 +5,12 @@
 
 @font-face {
   font-family: hattonmedium;
-  src: url(/src/assets/hatton-medium.otf) format("opentype");;
+  src: url(/src/assets/hatton-medium.otf) format("opentype");
 }
 
 @font-face {
   font-family: hattonlight;
-  src: url(/src/assets/hatton-light.otf) format("opentype");;
+  src: url(/src/assets/hatton-light.otf) format("opentype");
 }
 
 .about-container {
@@ -56,27 +56,30 @@
 }
 
 @media (max-width: 480px) {
-
-    .about-body {
-        max-width: 94vw;
-    }
+  .about-body {
+    max-width: 94vw;
+  }
 
   .about-main-title {
     font-size: 6.8vw;
-    
   }
 
-  .about-first, .about-second {
+  .about-first,
+  .about-second {
     opacity: 0.5;
   }
 
   .about-first {
-    left: 14%;
-    bottom: 77%;
+    left: 19%;
+    bottom: 68%;
   }
 
   .about-second {
-    left: 70%;
-    top: 32%;
+    left: 51%;
+    top: 44%;
+  }
+
+  .about-container {
+    padding: 10%;
   }
 }

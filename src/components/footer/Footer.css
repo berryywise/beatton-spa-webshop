@@ -59,7 +59,7 @@ input[name="footer"]::placeholder {
 @media (max-width: 480px) {
 
     .footer-title {
-        font-size: 6vw;
+        font-size: 6.5vw;
     }
 
     .footer-input {
