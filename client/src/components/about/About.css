@@ -18,6 +18,7 @@
   flex-direction: column;
   align-items: center;
   padding: 10% 0;
+  position: relative;
 }
 
 .about-body {
@@ -42,7 +43,7 @@
 .about-second {
   position: absolute;
   width: 12vw;
-  opacity: 0.9;
+  opacity: 0.7;
 }
 
 .about-first {
@@ -56,17 +57,13 @@
 }
 
 @media (max-width: 480px) {
+  
   .about-body {
     max-width: 94vw;
   }
 
   .about-main-title {
     font-size: 6.8vw;
-  }
-
-  .about-first,
-  .about-second {
-    opacity: 0.5;
   }
 
   .about-first {
@@ -88,14 +85,6 @@
 
   .about-container {
     margin: 10% 0;
-  }
-
-  .about-first {
-    top: 68%;
-  }
-
-  .about-second {
-    top: 98%;
   }
  
 }
