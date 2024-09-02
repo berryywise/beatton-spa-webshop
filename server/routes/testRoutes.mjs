@@ -1,9 +1,6 @@
 import { Router } from "express";
 import { testFunction } from "../controllers/testController.mjs";
 
-const router = Router();
+export const router = Router();
 
-router.get("/test", testFunction)
-
-
-export default router;
+router.get("/", testFunction)

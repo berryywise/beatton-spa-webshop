@@ -1,19 +1,21 @@
 import express from "express";
-import router from "./routes/routes.mjs";
+import {router as testRouter} from "./routes/testRoutes.mjs";
 
 const port = process.env.PORT || 3000;
 
 
 const app = express();
 
-app.use("/", router)
+app.use(express.json())
+
+app.use("/test", testRouter)
 
 app.get("/", (req, res) => {
-    res.json ("Server is running.")
+    res.json ({msg : "Server is running."})
 })
 
 app.use((req, res, next) => {
-    res.status(404).json("404 error - endpoint not found.")
+    res.status(500).json({msg: "Error - endpoint not found."})
 })
 
 
