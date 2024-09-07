@@ -50,6 +50,7 @@ const BrowserBody = () => {
           height="auto"
           src={product.img}
           alt="product image"
+          loading="lazy"
         />
         <div>
           <p className="browse-product-title">{product.name}</p>
