@@ -1,5 +1,5 @@
 import express from "express";
-import {router as testRouter} from "./routes/testRoutes.mjs";
+import {router as productsRouter} from "./routes/productsRoute.mjs";
 
 const port = process.env.PORT || 3000;
 
@@ -8,7 +8,7 @@ const app = express();
 
 app.use(express.json())
 
-app.use("/test", testRouter)
+app.use("/test", productsRouter)
 
 app.get("/", (req, res) => {
     res.json ({msg : "Server is running."})

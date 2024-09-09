@@ -34,7 +34,7 @@ const BrowserBody = () => {
     const newProduct: CartInterface = { ...product, quantity: 1 };
     addToCart(newProduct);
     Swal.fire({
-        title: "Added to cart!",
+        title: `${newProduct.name} was added to cart!`,
         icon: "success",
         confirmButtonColor: "#1f1f1f"
       });
