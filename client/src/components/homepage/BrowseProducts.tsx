@@ -1,11 +1,12 @@
 import sortIcon from "/iconamoon--arrow-down-2-thin.svg";
 import "./Home.css";
 
-import { ProductArr, FetchAllProducts } from "../products/products";
+import { ProductArr, FetchAllProducts } from "../products/useProducts";
 import React, { useContext } from "react";
 import { CartContext, CartInterface } from "../cart/CartProvider";
 
 import Swal from "sweetalert2";
+import { Alert, Grid, Grid2, Skeleton } from "@mui/material";
 
 const BrowserHeader = () => {
   return (
@@ -71,9 +72,20 @@ const BrowserBody = () => {
 
   // Shows loading or error message when fetching is not done yet / invalid.
 
-  if (loading) return <div>Loading...</div>
+  if (loading) return (
+    <Grid2 container justifyContent={"center"} spacing={2}>
+      <Skeleton variant="rectangular" width={250} height={250} />
+      <Skeleton variant="rectangular" width={250} height={250} />
+      <Skeleton variant="rectangular" width={250} height={250} />
+      <Skeleton variant="rectangular" width={250} height={250} />
+      <Skeleton variant="rectangular" width={250} height={250} />
+      <Skeleton variant="rectangular" width={250} height={250} />
+      <Skeleton variant="rectangular" width={250} height={250} />
+      <Skeleton variant="rectangular" width={250} height={250} />
+    </Grid2>
+  )
 
-  if (error) return <div>Error: {error.toString()}</div>
+  if (error) return <Alert severity="error">Error: {error.toString()}</Alert>
 
   if(!products || products.length === 0) {
     return <div>No products available.</div>

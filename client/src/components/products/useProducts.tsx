@@ -39,7 +39,7 @@ export const FetchAllProducts = () => {
          if(error.name === "AbortError") {
             return;
          }
-        setError(error.message || "An unknown error has occured");
+        setError("Failed to fetch products.");
         setLoading(false)
       }
     };
