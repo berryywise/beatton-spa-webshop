@@ -7,6 +7,7 @@ import searchIcon from "/iconamoon--search-thin.svg"
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../cart/CartProvider";
+import { Badge } from "@mui/material";
 
 const Header = () => {
 
@@ -26,8 +27,7 @@ const Header = () => {
                 <a href=""><img src={searchIcon} alt="search icon" /></a>
                 <a href=""><img src={userIcon} alt="account icon" /></a>
                 <div onClick={toggleCart} className="header-cart">
-                    <img src={bagIcon} alt="cart icon" />
-                    {cart && <p className="header-cart-quantity">{cartTotalItems}</p>}
+                    {cart && <Badge color="primary" badgeContent={cartTotalItems}><img src={bagIcon} alt="cart icon" /></Badge>}
                 </div>
             </div>
             

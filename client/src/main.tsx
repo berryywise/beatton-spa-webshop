@@ -11,7 +11,18 @@ import About from "./components/about/About.tsx";
 import Contact from "./components/contact/Contact.tsx";
 import { CartProvider } from "./components/cart/CartProvider.tsx";
 
-const theme = createTheme();
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#1F1F1F',
+      contrastText: '#fff',
+    },
+    secondary: {
+      main: '#868584',
+      contrastText: '#000',
+    },
+  },
+});
 
 const router = createBrowserRouter([
   {
