@@ -1,7 +1,11 @@
 import { Router } from "express";
-import { getProducts} from "../controllers/productsController.mjs";
+import { getAllProducts, getProductById } from "../controllers/productsController.mjs";
 
 export const router = Router();
 
 // Get all products.
-router.get("/", getProducts)
+router.get("/products", getAllProducts)
+
+// Get product by ID.
+
+router.get("/products/:id", getProductById)

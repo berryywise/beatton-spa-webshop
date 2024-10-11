@@ -10,13 +10,17 @@ const app = express();
 app.use(express.json())
 app.use("/public", express.static("public"))
 
-app.use("/test", productsRouter)
+// Routes respond.
+
+app.use("/api", productsRouter)
+
+// Main url respond.
 
 app.get("/", (req, res) => {
     res.json ({msg : "Server is running."})
 })
 
-// Catch invalid URL endpoints
+// Catch invalid URL endpoints.
 
 app.use((req, res, next) => {
     res.status(500).json({msg: "Error - endpoint not found."})

@@ -1,7 +1,11 @@
 Server side of Beatton Webshop.
 
+Note:
 
-Todo List
+- Fetch products from backend
+
+
+Features:
 
 - ✔ Put each product in PostgreSQL database, along with id, name, description, image(img from hosted url?), and price.
 - Make newsletter subscription column in database, show error on subscribed users.
