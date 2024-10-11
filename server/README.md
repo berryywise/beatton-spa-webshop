@@ -7,7 +7,7 @@ Features:
   - Fix CORS
   - Fix production links / same domain fetching
   - Middleware for limiting requests
-  - Update error / loading UI
+  - ✔ Update error / loading UI
   - Optional: Fetch caching when switching pages ?
   - DB: on server or cloud ? 
 - Make newsletter subscription column in database, show error on subscribed users.

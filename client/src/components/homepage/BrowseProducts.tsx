@@ -6,7 +6,7 @@ import React, { useContext } from "react";
 import { CartContext, CartInterface } from "../cart/CartProvider";
 
 import Swal from "sweetalert2";
-import { Alert, Grid, Grid2, Skeleton } from "@mui/material";
+import { Alert, Grid2, Skeleton } from "@mui/material";
 
 const BrowserHeader = () => {
   return (
