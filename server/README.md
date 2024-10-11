@@ -6,9 +6,9 @@ Features:
   - ✔ Fetch products from backend
   - Fix CORS
   - Fix production links / same domain fetching
-  - Middleware for limiting requests
+  - ✔ Middleware for limiting requests
   - ✔ Update error / loading UI
-  - Optional: Fetch caching when switching pages ?
+  - ✔ Optional: Fetch caching when switching pages
   - DB: on server or cloud ? 
 - Make newsletter subscription column in database, show error on subscribed users.
 - Account management system which contains user info, saved (last) cart. 

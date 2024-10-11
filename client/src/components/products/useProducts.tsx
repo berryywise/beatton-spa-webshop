@@ -18,6 +18,15 @@ export const FetchAllProducts = () => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+
+    const cachedProducts = sessionStorage.getItem("cachedProducts")
+
+    if(cachedProducts) {
+      setProducts(JSON.parse(cachedProducts))
+      setLoading(false)
+      return;
+    }
+
     const controller = new AbortController();
     const signal = controller.signal;
 
@@ -34,6 +43,7 @@ export const FetchAllProducts = () => {
 
         const data = await response.json();
         setProducts(data);
+        sessionStorage.setItem("cachedProducts", JSON.stringify(data));
         setLoading(false);
       } catch (error: any) {
          if(error.name === "AbortError") {
@@ -43,8 +53,9 @@ export const FetchAllProducts = () => {
         setLoading(false)
       }
     };
+      fetchProducts();
+    
 
-    fetchProducts();
 
     return () => {
       controller.abort();
