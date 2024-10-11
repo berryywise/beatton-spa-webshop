@@ -26,7 +26,7 @@ export interface CartInterface {
   description: string;
   quantity: number;
   price: number;
-  img: string;
+  imgurl: string;
 }
 
 //CartContext itself being made and initliazed with default values for the interface.

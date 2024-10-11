@@ -1,85 +1,55 @@
-import zeroImg from "/products/zeroimg.jpg"
-import firstImg from "/products/firstimg.jpg"
-import secondImg from "/products/secondimg.jpg"
-import thirdImg from "/products/thirdimg.jpg"
-import fourthImg from "/products/fourthimg.jpg"
-import fifthImg from "/products/fifthimg.jpg"
-import sixthImg from "/products/sixthimg.jpg"
-import seventhImg from "/products/seventhimg.jpg"
-import eightImg from "/products/eightimg.jpg"
+import { useEffect, useState } from "react";
 
-
+// Product interface Typescript
 
 export interface ProductArr {
-    id: number,
-    name: string,
-    description: string,
-    img: string,
-    price: number,
+  id: number;
+  name: string;
+  description: string;
+  imgurl: string;
+  price: number;
 }
 
-export const products: ProductArr[] = [
-    {
-       id: 0,
-       name: "FRAXINUS",
-       description: "Slim Console Table",
-       img: zeroImg,
-       price: 1299
-    },
-    {
-        id: 1,
-        name: "SALIEVO",
-        description: "Chalet Natural Sofa",
-        img: firstImg,
-        price: 3699
-     },
-     {
-        id: 2,
-        name: "AGORA",
-        description: "Mini Side Table",
-        img: secondImg,
-        price: 499
-     },
-     {
-        id: 3,
-        name: "GRIFFO",
-        description: "Barcalona Chair",
-        img: thirdImg,
-        price: 1599
-     },
-     {
-        id: 4,
-        name: "ARAMDO",
-        description: "Block Media Console",
-        img: fourthImg,
-        price: 1699
-     },
-     {
-        id: 5,
-        name: "HELENA",
-        description: "Round Coffee Table",
-        img: fifthImg,
-        price: 1299
-     },
-     {
-        id: 6,
-        name: "MUGGO",
-        description: "Mini Side Table",
-        img: sixthImg,
-        price: 999
-     },
-     {
-        id: 7,
-        name: "LOLITO",
-        description: "Round Coffee Table",
-        img: seventhImg,
-        price: 1199
-     },
-     {
-        id: 8,
-        name: "SIMONE",
-        description: "Marvel Side Table",
-        img: eightImg,
-        price: 899
-     }
-]
+// Fetch products with abortcontroller, return the results along with loading and error state.
+
+export const FetchAllProducts = () => {
+  const [products, setProducts] = useState<ProductArr[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    const signal = controller.signal;
+
+    const fetchProducts = async () => {
+      const apiUrl = import.meta.env.VITE_API_URL + "/api/products"
+      try {
+        const response = await fetch(apiUrl, {
+          signal,
+        });
+
+        if (!response.ok) {
+          throw new Error("Network response failed");
+        }
+
+        const data = await response.json();
+        setProducts(data);
+        setLoading(false);
+      } catch (error: any) {
+         if(error.name === "AbortError") {
+            return;
+         }
+        setError(error.message || "An unknown error has occured");
+        setLoading(false)
+      }
+    };
+
+    fetchProducts();
+
+    return () => {
+      controller.abort();
+    };
+  }, []);
+
+  return { products, loading, error };
+};

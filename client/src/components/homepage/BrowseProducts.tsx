@@ -1,7 +1,7 @@
 import sortIcon from "/iconamoon--arrow-down-2-thin.svg";
 import "./Home.css";
 
-import { products, ProductArr } from "../products/products";
+import { ProductArr, FetchAllProducts } from "../products/products";
 import React, { useContext } from "react";
 import { CartContext, CartInterface } from "../cart/CartProvider";
 
@@ -19,36 +19,43 @@ const BrowserHeader = () => {
   );
 };
 
-//TODO add add to cart button on img - added to cart confirmation.
 
 const BrowserBody = () => {
 
+  // Fetch products trough fetch component.
+
+  const { loading, products, error } = FetchAllProducts();
 
   const { addToCart } = useContext(CartContext);
 
+  // Handle add to cart interactions on homepage, which triggers global cart event.
 
   const handleAddItem = (event: React.MouseEvent, product: ProductArr) => {
-
     event.preventDefault();
 
     const newProduct: CartInterface = { ...product, quantity: 1 };
     addToCart(newProduct);
     Swal.fire({
-        title: `${newProduct.name} was added to cart!`,
-        icon: "success",
-        confirmButtonColor: "#1f1f1f"
-      });
+      title: `${newProduct.name} was added to cart!`,
+      icon: "success",
+      confirmButtonColor: "#1f1f1f",
+    });
   };
-  
+
+  // Renders each product.
 
   const Product = ({ product }: { product: ProductArr }) => {
     return (
-      <div className="browse-product-container" onClick={(event) => handleAddItem(event, product)} key={product.id}>
+      <div
+        className="browse-product-container"
+        onClick={(event) => handleAddItem(event, product)}
+        key={product.id}
+      >
         <img
           className="browse-product-img"
           width="150px"
           height="auto"
-          src={product.img}
+          src={product.imgurl}
           alt="product image"
           loading="lazy"
         />
@@ -60,6 +67,17 @@ const BrowserBody = () => {
       </div>
     );
   };
+
+
+  // Shows loading or error message when fetching is not done yet / invalid.
+
+  if (loading) return <div>Loading...</div>
+
+  if (error) return <div>Error: {error.toString()}</div>
+
+  if(!products || products.length === 0) {
+    return <div>No products available.</div>
+  }
 
   return (
     <div className="browse-body-container">

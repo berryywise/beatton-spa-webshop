@@ -13,9 +13,3 @@ export const Product = {
     }
     
 }
-
-// export const findPath = async (id) => {
-//     const result = await pool.query('SELECT imgurl FROM products WHERE id = $1', [id])
-
-//     return result.rows[0]?.imgurl;
-// }
