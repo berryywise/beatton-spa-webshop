@@ -1,4 +1,6 @@
-Beatton Webshop | Made with React - React Router - Typescript - Vite.
+Beatton Webshop - Full Stack Webshop
+
+Client side tech stack: React - React Router - Typescript - Vite
 
 Server side - Work In Progress. 
 
