@@ -17,13 +17,13 @@ const rateLimiter = rateLimit({
 app.use(rateLimiter);
 
 // Enable use of json formatting and serving public images.
-app.use(cors());
+app.use(cors({origin: "http://localhost:5173", credentials: true}));
 app.use(express.json());
 app.use("/public", express.static("public"));
 
 // Routes respond.
 
-app.use("/api", productsRouter);
+app.use("/api/v1", productsRouter);
 
 // Main url respond.
 

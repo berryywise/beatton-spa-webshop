@@ -27,22 +27,40 @@ export const getAllProducts = async (req, res) => {
 
 export const getProductById = async (req, res) => {
   try {
-
     const productId = req.params.id;
 
     const { rows: product } = await Product.getProductbyId(productId);
 
-    if(!product) {
-      return res.status(404).json({ error: "Product not found" })
+    if (!product) {
+      return res.status(404).json({ error: "Product not found" });
     }
 
     const hostUrl = `${req.protocol}://${req.get("host")}`;
-    
+
     product[0].imgurl = hostUrl + product[0].imgurl;
 
-    res.json(product)
-
+    res.json(product);
   } catch (error) {
-    res.status(500).json({ error: "Failed to retrieve product" })
+    res.status(500).json({ error: "Failed to retrieve product" });
   }
-}
+};
+
+// Create Product.
+
+export const createProduct = async (req, res) => {
+  try {
+    const { name, description, imgurl, price, in_stock } = req.body;
+
+    const savedProduct = await Product.createProduct(
+      name,
+      description,
+      imgurl,
+      price,
+      in_stock
+    );
+
+    res.json("Product created successfully!");
+  } catch (error) {
+    res.status(500).json({ error: "Failed to create product" });
+  }
+};
