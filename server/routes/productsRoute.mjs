@@ -1,23 +1,29 @@
 import { Router } from "express";
-import { createProduct, getAllProducts, getProductById, updateProduct, deleteProduct } from "../controllers/productsController.mjs";
+import {
+  createProduct,
+  getAllProducts,
+  getProductById,
+  updateProduct,
+  deleteProduct,
+} from "../controllers/productsController.mjs";
 
 export const router = Router();
 
-// Get all products.
-router.get("/products", getAllProducts)
+// Get all products
+router.get("/", getAllProducts);
 
-// Get product by ID.
+// Get product by ID
 
-router.get("/products/:id", getProductById)
+router.get("/:id", getProductById);
 
 // Create product
 
-router.post("/products", createProduct)
+router.post("/", createProduct);
 
 // Update product
 
-router.patch("/products/:id", updateProduct)
+router.patch("/:id", updateProduct);
 
 // Delete product
 
-router.delete("/products/:id", deleteProduct)
+router.delete("/:id", deleteProduct);

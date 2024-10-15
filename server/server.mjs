@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import { rateLimit } from "express-rate-limit";
 import { router as productsRouter } from "./routes/productsRoute.mjs";
+import { router as userRouter } from "./routes/userRoute.mjs"
 
 const port = process.env.PORT || 3000;
 
@@ -17,13 +18,14 @@ const rateLimiter = rateLimit({
 app.use(rateLimiter);
 
 // Enable use of json formatting and serving public images.
-app.use(cors({origin: "http://localhost:5173", credentials: true}));
+app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 app.use(express.json());
 app.use("/public", express.static("public"));
 
 // Routes respond.
 
-app.use("/api/v1", productsRouter);
+app.use("/api/products", productsRouter);
+app.use("/api/user", userRouter)
 
 // Main url respond.
 

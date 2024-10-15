@@ -30,7 +30,7 @@ export const Product = {
   },
 
   async deleteProduct(id) {
-    const result = await pool.query("DELETE FROM products WHERE id = $1", [id])
+    const result = await pool.query("DELETE FROM products WHERE id = $1", [id]);
     return result;
-  }
+  },
 };

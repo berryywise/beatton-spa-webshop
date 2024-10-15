@@ -1,6 +1,6 @@
 import { Product } from "../models/productsModel.mjs";
 
-// Get all products - change imgURL link to dynamic host url.
+// Get all products - change imgURL link to dynamic host url
 
 export const getAllProducts = async (req, res) => {
   try {
@@ -23,7 +23,7 @@ export const getAllProducts = async (req, res) => {
   }
 };
 
-// Get product by ID.
+// Get product by ID
 
 export const getProductById = async (req, res) => {
   try {
@@ -43,11 +43,10 @@ export const getProductById = async (req, res) => {
   }
 };
 
-// Create Product.
+// Create Product
 
 export const createProduct = async (req, res) => {
   try {
-
     const { name, description, imgurl, price, in_stock } = req.body;
 
     const result = await Product.createProduct(
@@ -64,13 +63,14 @@ export const createProduct = async (req, res) => {
   }
 };
 
+// Update product - partial info possible
+
 export const updateProduct = async (req, res) => {
   try {
-
     const { name, description, imgurl, price, in_stock } = req.body;
-    const id  = req.params.id;
+    const id = req.params.id;
 
-    if(!id) return res.status(400).json("Product ID is invalid!")
+    if (!id) return res.status(400).json("Product ID is invalid!");
 
     const result = await Product.updateProduct(
       name,
@@ -81,7 +81,7 @@ export const updateProduct = async (req, res) => {
       id
     );
 
-    if(result.rowCount === 0) return res.status(404).json("Product not found")
+    if (result.rowCount === 0) return res.status(404).json("Product not found");
 
     res.json(result.rows[0]);
   } catch (error) {
@@ -89,21 +89,20 @@ export const updateProduct = async (req, res) => {
   }
 };
 
+// Delete product
+
 export const deleteProduct = async (req, res) => {
   try {
     const id = req.params.id;
 
-    if(!id) return res.status(400).json("Product ID is invalid!")
+    if (!id) return res.status(400).json("Product ID is invalid!");
 
     const result = await Product.deleteProduct(id);
 
-    if(result.rowCount === 0) return res.status(404).json("Product not found")
+    if (result.rowCount === 0) return res.status(404).json("Product not found");
 
-    res.json("Product deleted succesfully!")
-
-
-    
+    res.json("Product deleted succesfully!");
   } catch (error) {
-    res.status(500).json("Failed to delete product")
+    res.status(500).json("Failed to delete product");
   }
-}
+};
