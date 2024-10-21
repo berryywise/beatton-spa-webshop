@@ -68,6 +68,7 @@ export const createProduct = async (req, res) => {
 export const updateProduct = async (req, res) => {
   try {
     const { name, description, imgurl, price, in_stock } = req.body;
+
     const id = req.params.id;
 
     if (!id) return res.status(400).json("Product ID is invalid!");

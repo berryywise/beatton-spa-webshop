@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import { rateLimit } from "express-rate-limit";
 import { router as productsRouter } from "./routes/productsRoute.mjs";
-import { router as userRouter } from "./routes/userRoute.mjs"
+import { router as userRouter } from "./routes/userRoute.mjs";
 
 const port = process.env.PORT || 3000;
 
@@ -25,7 +25,7 @@ app.use("/public", express.static("public"));
 // Routes respond.
 
 app.use("/api/products", productsRouter);
-app.use("/api/user", userRouter)
+app.use("/api/user", userRouter);
 
 // Main url respond.
 

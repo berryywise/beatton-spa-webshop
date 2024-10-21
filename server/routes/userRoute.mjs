@@ -1,25 +1,28 @@
 import { Router } from "express";
-import { deleteUserById, getUserById } from "../controllers/userController.mjs";
+import {
+  deleteUserById,
+  getUserById,
+  updateUserById,
+} from "../controllers/userController.mjs";
 
 export const router = Router();
 
 // Get user
 
-router.get("/:id", getUserById)
+router.get("/:id", getUserById);
 
 // Create user
 
-router.post("/register")
+router.post("/register");
 
 // Login user
 
-router.post("/login")
+router.post("/login");
 
 // Update user
 
-router.patch("/:id")
+router.patch("/:id", updateUserById);
 
 // Delete user
 
-router.delete("/:id", deleteUserById)
-
+router.delete("/:id", deleteUserById);
