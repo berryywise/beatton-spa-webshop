@@ -6,7 +6,7 @@ import {
   updateProduct,
   deleteProduct,
 } from "../controllers/productsController.mjs";
-import { verifyToken } from "../middlewares/auth.mjs";
+import { verifyToken, verifyTokenAndAdmin } from "../middlewares/auth.mjs";
 
 export const router = Router();
 
@@ -19,12 +19,12 @@ router.get("/:id", getProductById);
 
 // Create product
 
-router.post("/", createProduct);
+router.post("/", verifyTokenAndAdmin, createProduct);
 
 // Update product
 
-router.patch("/:id", updateProduct);
+router.patch("/:id", verifyTokenAndAdmin, updateProduct);
 
 // Delete product
 
-router.delete("/:id", deleteProduct);
+router.delete("/:id", verifyTokenAndAdmin, deleteProduct);

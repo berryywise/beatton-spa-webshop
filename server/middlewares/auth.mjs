@@ -22,3 +22,13 @@ export const verifyToken = async (req, res, next) => {
         console.log(error)
     }
 }
+
+export const verifyTokenAndAdmin = (req, res, next) => {
+    verifyToken(req, res, () => {
+        if (req.user.is_admin) {
+            next()
+        } else {
+            res.status(httpStatusCode.UNAUTHORIZED).json("Access denied - admins only")
+        }
+    })
+}
