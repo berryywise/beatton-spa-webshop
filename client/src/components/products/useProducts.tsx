@@ -23,7 +23,7 @@ export const FetchAllProducts = () => {
     const signal = controller.signal;
 
     const fetchProducts = async () => {
-      const apiUrl = import.meta.env.VITE_API_URL + "/api/v1/products"
+      const apiUrl = import.meta.env.VITE_API_URL + "/api/products"
       try {
         const response = await fetch(apiUrl, {
           signal,

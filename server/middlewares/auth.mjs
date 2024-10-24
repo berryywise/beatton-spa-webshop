@@ -18,8 +18,7 @@ export const verifyToken = async (req, res, next) => {
         next()
 
     } catch (error) {
-        res.status(httpStatusCode.BAD_REQUEST).json("Invalid or expired token");
-        console.log(error)
+        return res.status(httpStatusCode.BAD_REQUEST).json("Invalid or expired token");
     }
 }
 

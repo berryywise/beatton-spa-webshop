@@ -10,6 +10,8 @@ import ErrorPage from "./components/misc/ErrorPage.tsx";
 import About from "./components/about/About.tsx";
 import Contact from "./components/contact/Contact.tsx";
 import { CartProvider } from "./components/cart/CartProvider.tsx";
+import Login from "./components/authentication/Login.tsx";
+import Register from "./components/authentication/Register.tsx";
 
 const theme = createTheme({
   palette: {
@@ -38,6 +40,16 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <Contact />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/register",
+    element: <Register />,
     errorElement: <ErrorPage />,
   },
 ]);

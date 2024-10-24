@@ -1,0 +1,14 @@
+:root {
+    --primary-text-color: ;
+    --secondary-text-color: #868584;
+  }
+  
+  @font-face {
+    font-family: hattonmedium;
+    src: url(/src/assets/hatton-medium.otf) format("opentype");;
+  }
+  
+  @font-face {
+    font-family: hattonlight;
+    src: url(/src/assets/hatton-light.otf) format("opentype");;
+  }
