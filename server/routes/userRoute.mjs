@@ -7,12 +7,14 @@ import {
   registerUser,
   updateUserById,
 } from "../controllers/userController.mjs";
+import { verifyToken } from "../middlewares/auth.mjs";
+
 
 export const router = Router();
 
 // Get all users & user by ID
 
-router.get("/", getUsers);
+router.get("/", verifyToken, getUsers);
 
 router.get("/:id", getUserById);
 

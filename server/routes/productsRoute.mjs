@@ -6,6 +6,7 @@ import {
   updateProduct,
   deleteProduct,
 } from "../controllers/productsController.mjs";
+import { verifyToken } from "../middlewares/auth.mjs";
 
 export const router = Router();
 
