@@ -1,140 +1,131 @@
 ::placeholder {
-    color: black;
-  }
-  
-  :root {
-    --primary-text-color: ;
-    --secondary-text-color: #868584;
-  }
-  
+  color: black;
+}
+
+:root {
+  --primary-text-color: ;
+  --secondary-text-color: #868584;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50vh;
+}
+
+.contact-form-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 40vw;
+}
+
+.contact-form-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-input {
+  color: black;
+  border: none;
+  border-bottom: 1.5px solid var(--secondary-text-color);
+  background-color: transparent;
+  width: 21vw;
+  padding-bottom: 15px;
+  outline: none;
+}
+
+.contact-first-image,
+.contact-second-image,
+.contact-third-image {
+  width: 15vw;
+}
+
+.contact-button {
+  padding: 2%;
+  max-width: 150px;
+  border-radius: 5px;
+  color: #fefefe;
+  background-color: #1f1f1f;
+}
+
+.contact-image-container {
+  display: flex;
+  gap: 1rem;
+  height: 100%;
+}
+
+.contact-image-container-left {
+  display: flex;
+  align-items: flex-end;
+}
+
+.contact-image-container-right {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.contact-second-image {
+  width: 10vw;
+  align-self: flex-end;
+}
+
+.contact-third-image {
+  align-self: flex-start;
+  width: 6vw;
+}
+
+@media (max-width: 480px) {
   .contact-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 50vh;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 10%;
+    margin: 5% 0;
   }
-  
-  .contact-form-container {
-    display: flex;
-    justify-content: flex-start;
+
+  .contact-image-container-left,
+  .contact-image-container-right {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-first-image {
     width: 40vw;
   }
-  
-  .contact-form-body {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .contact-input {
-    color: black;
-    border: none;
-    border-bottom: 1.5px solid var(--secondary-text-color);
-    background-color: transparent;
-    width: 21vw;
-    padding-bottom: 15px;
-    outline: none;
-  }
-  
-  .contact-first-image,
-  .contact-second-image,
-  .contact-third-image {
-    width: 15vw;
-  }
-  
-  .contact-button {
-      padding: 2%;
-      max-width: 150px;
-      border-radius: 5px;
-      color: #FEFEFE;
-      background-color: #1F1F1F;
-  }
-  
-  .contact-image-container {
-      display: flex;
-      gap: 1rem;
-      height: 100%;
-  }
-  
-  .contact-image-container-left {
-      display: flex;
-      align-items: flex-end;
-  }
-  
-  .contact-image-container-right {
-      display: flex;
-      align-items: flex-end;
-      flex-direction: column;
-      justify-content: center;
-      gap: 1rem;
-  
-  }
-  
+
   .contact-second-image {
-      width: 10vw;
-      align-self: flex-end;
+    width: 25vw;
   }
-  
+
   .contact-third-image {
-      align-self: flex-start;
-      width: 6vw;
+    width: 18vw;
   }
-  
-  @media (max-width: 480px) {
-  
-      .contact-container {
-          flex-direction: column;
-          gap: 2rem;
-          padding: 10%;
-          margin: 5% 0;
-      }
-  
-      .contact-image-container-left, .contact-image-container-right {
-  
-          justify-content: center;
-          align-items: center;
-  
-      }
-  
-      .contact-first-image {
-          width: 40vw;
-      }
-  
-      .contact-second-image {
-          width: 25vw;
-      }
-  
-      .contact-third-image {
-          width: 18vw;
-      }
-  
-      .contact-form-container {
-          flex-direction: column;
-          width: 100%;
-      }
-  
-      .contact-form-body {
-          align-items: center;
-      }
-  
-      .contact-input {
-  
-          width: 100%;
-  
-      }
-  
-      .contact-button {
-          width: 50%;
-      }
-      
+
+  .contact-form-container {
+    flex-direction: column;
+    width: 100%;
   }
-  
-  
-  @media (min-width: 480px) and (max-width: 1080px) {
-  
-      .contact-container {
-          gap: 2rem;
-          margin: 5% 0;
-      }
-  
+
+  .contact-form-body {
+    align-items: center;
   }
+
+  .contact-input {
+    width: 100%;
+  }
+
+  .contact-button {
+    width: 50%;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1080px) {
+  .contact-container {
+    gap: 2rem;
+    margin: 5% 0;
+  }
+}

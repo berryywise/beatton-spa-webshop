@@ -18,12 +18,11 @@ export const FetchAllProducts = () => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-
     const controller = new AbortController();
     const signal = controller.signal;
 
     const fetchProducts = async () => {
-      const apiUrl = import.meta.env.VITE_API_URL + "/api/products"
+      const apiUrl = import.meta.env.VITE_API_URL + "/api/products";
       try {
         const response = await fetch(apiUrl, {
           signal,
@@ -37,16 +36,14 @@ export const FetchAllProducts = () => {
         setProducts(data);
         setLoading(false);
       } catch (error: any) {
-         if(error.name === "AbortError") {
-            return;
-         }
+        if (error.name === "AbortError") {
+          return;
+        }
         setError("Failed to fetch products.");
-        setLoading(false)
+        setLoading(false);
       }
     };
-      fetchProducts();
-    
-
+    fetchProducts();
 
     return () => {
       controller.abort();
