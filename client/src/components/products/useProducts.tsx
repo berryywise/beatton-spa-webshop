@@ -22,7 +22,7 @@ export const FetchAllProducts = () => {
     const signal = controller.signal;
 
     const fetchProducts = async () => {
-      const apiUrl = import.meta.env.VITE_API_URL + "/api/products";
+      const apiUrl = "https://beatton-server.up.railway.app/api/products";
       try {
         const response = await fetch(apiUrl, {
           signal,
