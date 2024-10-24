@@ -3,6 +3,7 @@ import {
   deleteUserById,
   getUserById,
   getUsers,
+  loginUser,
   registerUser,
   updateUserById,
 } from "../controllers/userController.mjs";
@@ -11,7 +12,7 @@ export const router = Router();
 
 // Get all users & user by ID
 
-router.get("/", getUsers)
+router.get("/", getUsers);
 
 router.get("/:id", getUserById);
 
@@ -21,7 +22,7 @@ router.post("/register", registerUser);
 
 // Login user
 
-router.post("/login");
+router.post("/login", loginUser);
 
 // Update user
 

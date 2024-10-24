@@ -1,6 +1,7 @@
 import { httpStatusCode } from "../constants/httpsStatusCode.mjs";
 import { User } from "../models/userModel.mjs";
 import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
 
 export const getUsers = async (req, res) => {
   try {
@@ -66,6 +67,42 @@ export const registerUser = async (req, res) => {
     res.status(httpStatusCode.INTERNAL_SERVER).json("Failed to register user");
   }
 };
+
+export const loginUser = async (req, res) => {
+  try {
+
+    const {email, password} = req.body
+
+    if(!email || !password) return res.status(httpStatusCode.BAD_REQUEST).json("All user fields are required")
+
+    const existingUser = await User.findByEmail(email);
+
+    if(existingUser.rowCount === 0) return res.status(httpStatusCode.NOT_FOUND).json("User with email not found")
+
+    const hashedPassword = existingUser.rows[0].password
+
+    const validPassword = await bcrypt.compare(password, hashedPassword)
+
+    if(!validPassword) return res.status(httpStatusCode.BAD_REQUEST).json("Invalid Credentials")
+
+    const {id, is_admin} = existingUser.rows[0];
+
+    const token = jwt.sign({email, id, is_admin }, "random_jwt_2321@231**@$@#)")
+
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: true,
+      sameSite: "strict",
+      maxAge: 60 * 60 * 24 * 1
+    })
+
+    res.json("User Authenticated")
+
+  } catch (error) {
+    res.status(httpStatusCode.INTERNAL_SERVER).json("Failed to login user");
+    console.log(error)
+  }
+}
 
 // Update user by ID
 

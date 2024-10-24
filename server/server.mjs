@@ -35,7 +35,7 @@ app.get("/", (req, res) => {
 
 // Catch invalid URL endpoints.
 
-app.use((req, res, next) => {
+app.use((req, res) => {
   res.status(500).json({ msg: "Error - endpoint not found." });
 });
 

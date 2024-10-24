@@ -50,7 +50,7 @@ export const createProduct = async (req, res) => {
   try {
     const { name, description, imgurl, price, in_stock } = req.body;
 
-    const result = await Product.createProduct(
+    await Product.createProduct(
       name,
       description,
       imgurl,
