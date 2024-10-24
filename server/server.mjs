@@ -18,7 +18,7 @@ const rateLimiter = rateLimit({
 app.use(rateLimiter);
 
 // Enable use of json formatting and serving public images.
-app.use(cors({ origin: "https://beatton-webshop.vercel.app/", credentials: true }));
+app.use(cors({ origin: "https://beatton-webshop.vercel.app", credentials: true }));
 app.use(express.json());
 app.use("/public", express.static("public"));
 
